@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version 13.4
-# Date: Tue Apr 11 16:55:31 2017
+# Xilinx Core Generator version K.39
+# Date: Tue Jul 30 10:34:30 2013
 #
 ##############################################################
 #
@@ -12,39 +12,35 @@
 #
 ##############################################################
 #
-#  Generated from component: xilinx.com:ip:Block_Memory_Generator:2.8
-#
-##############################################################
-#
 # BEGIN Project Options
-SET addpads = false
-SET asysymbol = true
+SET addpads = False
+SET asysymbol = True
 SET busformat = BusFormatAngleBracketNotRipped
-SET createndf = false
-SET designentry = Verilog
-SET device = xc5vtx240t
-SET devicefamily = virtex5
-SET flowvendor = Foundation_ISE
-SET formalverification = false
-SET foundationsym = false
+SET createndf = False
+SET designentry = VHDL
+SET device = xc2vp50
+SET devicefamily = virtex2p
+SET flowvendor = Foundation_iSE
+SET formalverification = False
+SET foundationsym = False
 SET implementationfiletype = Ngc
-SET package = ff1759
-SET removerpms = false
+SET package = ff1148
+SET removerpms = False
 SET simulationfiles = Behavioral
-SET speedgrade = -2
-SET verilogsim = true
-SET vhdlsim = false
+SET speedgrade = -7
+SET verilogsim = True
+SET vhdlsim = True
 # END Project Options
 # BEGIN Select
-SELECT Block_Memory_Generator xilinx.com:ip:Block_Memory_Generator:2.8
+SELECT Block_Memory_Generator family Xilinx,_Inc. 2.8
 # END Select
 # BEGIN Parameters
 CSET algorithm=Minimum_Area
 CSET assume_synchronous_clk=false
 CSET byte_size=9
-CSET coe_file=ramdp3.coe
+CSET coe_file=ramdp1.coe
 CSET collision_warnings=ALL
-CSET component_name=ramdp3
+CSET component_name=ramdp1
 CSET disable_collision_warnings=false
 CSET disable_out_of_range_warnings=false
 CSET ecc=false
@@ -52,15 +48,15 @@ CSET enable_a=Always_Enabled
 CSET enable_b=Always_Enabled
 CSET fill_remaining_memory_locations=false
 CSET load_init_file=true
-CSET memory_type=True_Dual_Port_RAM
-CSET operating_mode_a=READ_FIRST
-CSET operating_mode_b=READ_FIRST
+CSET memory_type=Single_Port_RAM
+CSET operating_mode_a=WRITE_FIRST
+CSET operating_mode_b=WRITE_FIRST
 CSET output_reset_value_a=0
 CSET output_reset_value_b=0
 CSET pipeline_stages=0
 CSET primitive=8kx2
-CSET read_width_a=16
-CSET read_width_b=16
+CSET read_width_a=10
+CSET read_width_b=10
 CSET register_porta_output_of_memory_core=false
 CSET register_porta_output_of_memory_primitives=false
 CSET register_portb_output_of_memory_core=false
@@ -74,8 +70,9 @@ CSET use_regceb_pin=false
 CSET use_ssra_pin=false
 CSET use_ssrb_pin=false
 CSET write_depth_a=256
-CSET write_width_a=16
-CSET write_width_b=16
+CSET write_width_a=10
+CSET write_width_b=10
 # END Parameters
 GENERATE
-# CRC: 8dd1c640
+# CRC: fe314a3d
+

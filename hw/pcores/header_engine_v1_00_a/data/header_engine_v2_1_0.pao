@@ -37,14 +37,17 @@ lib nf10_proc_common_v1_00_a  all
 lib axi_lite_ipif_v1_01_a  all
 
 lib header_engine_v1_00_a c_compare verilog
-lib header_engine_v1_00_a destinationport verilog
 lib header_engine_v1_00_a compare_h verilog
+lib header_engine_v1_00_a ramdp3 verilog
+lib header_engine_v1_00_a ramdp2 verilog
+lib header_engine_v1_00_a ramdp1 verilog
 lib header_engine_v1_00_a ramsp3 verilog
 lib header_engine_v1_00_a ramsp2 verilog
 lib header_engine_v1_00_a ramsp1 verilog
-lib header_engine_v1_00_a hash verilog
+lib header_engine_v1_00_a bit_TCAM_72 verilog
+lib header_engine_v1_00_a hs1rnd verilog
+lib header_engine_v1_00_a desport verilog
 lib header_engine_v1_00_a sourceport verilog
-lib header_engine_v1_00_a bit_TCAM verilog
 lib header_engine_v1_00_a Protocol_SA_DA verilog
 lib header_engine_v1_00_a matching verilog
 
