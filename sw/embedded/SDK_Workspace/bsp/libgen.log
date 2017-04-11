@@ -1,0 +1,12 @@
+Release 13.4 - libgen Xilinx EDK 13.4 Build EDK_O.87xd
+ (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../hw/system.xml -lp
+/home/viettien/NetFPGA-10G-live-release_5.0.7/lib/sw -lp
+/home/viettien/NetFPGA-10G-live-release_5.0.7/lib/sw -pe microblaze_0 -log
+libgen.log system.mss 
+
+ERROR:EDK:756 - Cannot read XML file ../hw/system.xml
+ERROR:EDK:2630 - Unable to read the hardware specification file:
+   ../hw/system.xml.

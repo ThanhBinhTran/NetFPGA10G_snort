@@ -1,0 +1,53 @@
+
+**** Build of configuration Debug for project hello_world_0 ****
+
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -I../../bsp/microblaze_0/include -c -fmessage-length=0 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.a -mxl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o"src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:46:20: error: xwdttb.h: No such file or directory
+../src/helloworld.c:47:23: error: xemaclite.h: No such file or directory
+../src/helloworld.c:48:25: error: xemaclite_l.h: No such file or directory
+In file included from ../src/helloworld.c:58:
+../src/helloworld.h:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘regs0’
+../src/helloworld.h:82: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘regs1’
+../src/helloworld.h:88: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘twinax_edc’
+../src/helloworld.h:738: error: expected ‘)’ before ‘*’ token
+../src/helloworld.h:739: error: expected ‘)’ before ‘*’ token
+../src/helloworld.h:741: error: expected ‘)’ before ‘*’ token
+../src/helloworld.h:742: error: expected ‘)’ before ‘*’ token
+../src/helloworld.h:744: error: expected ‘)’ before ‘*’ token
+../src/helloworld.h:745: error: expected ‘)’ before ‘*’ token
+../src/helloworld.h:746: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c:64: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘EmacLiteInstance’
+../src/helloworld.c: In function ‘main’:
+../src/helloworld.c:69: error: ‘XEmacLite’ undeclared (first use in this function)
+../src/helloworld.c:69: error: (Each undeclared identifier is reported only once
+../src/helloworld.c:69: error: for each function it appears in.)
+../src/helloworld.c:69: error: ‘EmacLiteInstPtr’ undeclared (first use in this function)
+../src/helloworld.c:69: error: ‘EmacLiteInstance’ undeclared (first use in this function)
+../src/helloworld.c:70: error: ‘XEmacLite_Config’ undeclared (first use in this function)
+../src/helloworld.c:70: error: ‘ConfigPtr’ undeclared (first use in this function)
+../src/helloworld.c:72: warning: implicit declaration of function ‘XEmacLite_LookupConfig’
+../src/helloworld.c:72: error: ‘XPAR_EMACLITE_0_DEVICE_ID’ undeclared (first use in this function)
+../src/helloworld.c:73: warning: implicit declaration of function ‘XEmacLite_CfgInitialize’
+../src/helloworld.c:90: warning: implicit declaration of function ‘inbyte’
+../src/helloworld.c:99: warning: implicit declaration of function ‘ael2005_read’
+../src/helloworld.c:105: warning: implicit declaration of function ‘ael2005_i2c_read’
+../src/helloworld.c:126: warning: implicit declaration of function ‘test_initialize’
+../src/helloworld.c: At top level:
+../src/helloworld.c:138: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c:145: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c:153: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c:167: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c: In function ‘ael2005_sleep’:
+../src/helloworld.c:185: warning: implicit declaration of function ‘XWdtTb_ReadReg’
+../src/helloworld.c:185: error: ‘XPAR_AXI_TIMEBASE_WDT_0_BASEADDR’ undeclared (first use in this function)
+../src/helloworld.c:185: error: ‘XWT_TBR_OFFSET’ undeclared (first use in this function)
+../src/helloworld.c:190: error: ‘XST_SUCCESS’ undeclared (first use in this function)
+../src/helloworld.c:191: warning: control reaches end of non-void function
+../src/helloworld.c: At top level:
+../src/helloworld.c:193: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c:228: error: expected ‘)’ before ‘*’ token
+../src/helloworld.c:235: error: expected ‘)’ before ‘*’ token
+make: *** [src/helloworld.o] Error 1

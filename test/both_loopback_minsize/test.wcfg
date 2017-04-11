@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="./isim.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="attributes" />
+            <top_module name="family" />
+            <top_module name="family_support" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="nf10_axis_sim_pkg" />
+            <top_module name="numeric_std" />
+            <top_module name="proc_common_pkg" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_misc" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="system_axisim_tb" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/payload_done" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">payload_done[255:0]</obj_property>
+      <obj_property name="ObjectShortName">payload_done[255:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="label">payload_done[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/ips_done" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ips_done[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ips_done[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/s_axis_tdata_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_axis_tdata_0[255:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tdata_0[255:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/s_axis_tstrb_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_axis_tstrb_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tstrb_0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/s_axis_tuser_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_axis_tuser_0[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tuser_0[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/s_axis_tvalid_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_axis_tvalid_0</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tvalid_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/s_axis_tlast_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_axis_tlast_0</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tlast_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/nf10_packet_decoder_0/s_axis_tready_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_axis_tready_0</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tready_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tdata_0" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m_axis_tdata_0[255:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tdata_0[255:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="label">m_axis_tdata_0[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tstrb_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tstrb_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tstrb_0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tuser_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tuser_0[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tuser_0[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tvalid_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tvalid_0</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tready_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tready_0</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tready_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tlast_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tlast_0</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tlast_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tdata_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tdata_1[255:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tdata_1[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tstrb_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tstrb_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tstrb_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tuser_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tuser_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tuser_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tvalid_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tvalid_1</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tready_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tready_1</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tready_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/m_axis_tlast_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m_axis_tlast_1</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tlast_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/system_axisim_tb/dut/nf10_packet_decoder_0/axi_aclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">axi_aclk</obj_property>
+   </wvobject>
+</wave_config>

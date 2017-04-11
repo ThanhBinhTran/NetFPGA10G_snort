@@ -1,0 +1,16 @@
+##############################################################################
+## Filename:          /home/netfpga/anhqvn/tranchau/13_6_xps_pr_hrav_final_reduce_modify_hwicap/hw/pcores/packet_decoder_v1_00_a/data/packet_decoder_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sat Sep 12 10:24:07 2015 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all
+lib axi_lite_ipif_v1_01_a  all
+lib nf10_proc_common_v1_00_a  all
+
+lib nf10_packet_decoder_v1_10_a nf10_packet_decoder.v verilog
+lib nf10_packet_decoder_v1_10_a packet_pre_process.v verilog
+lib nf10_packet_decoder_v1_10_a packet_pos_process.v verilog
+lib nf10_packet_decoder_v1_10_a small_fifo_v3.v verilog
+lib nf10_packet_decoder_v1_10_a fallthrough_small_fifo_v2.v verilog
+lib nf10_packet_decoder_v1_10_a fifo.v verilog

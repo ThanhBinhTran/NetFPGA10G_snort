@@ -1,0 +1,382 @@
+module axi4_lite_regs
+  #(
+    // Master AXI Lite Data Width
+    parameter C_S_AXI_C_S_AXI_DATA_WIDTH=32,
+    parameter C_S_AXI_ADDR_WIDTH=32
+    )
+   (
+    input                        ACLK,
+    input                        ARESETN,
+    
+    input [C_S_AXI_ADDR_WIDTH-1: 0]      AWADDR,
+    input                        AWVALID,
+    output reg                   AWREADY,
+    
+    input [C_S_AXI_DATA_WIDTH-1: 0]      WDATA,
+    input [C_S_AXI_DATA_WIDTH/8-1: 0]    WSTRB,
+    input                        WVALID,
+    output reg                   WREADY,
+    
+    output reg [1:0]             BRESP,
+    output reg                   BVALID,
+    input                        BREADY,
+    
+    input [C_S_AXI_ADDR_WIDTH-1: 0]      ARADDR,
+    input                        ARVALID,
+    output reg                   ARREADY,
+    
+    output reg [C_S_AXI_DATA_WIDTH-1: 0] RDATA, 
+    output reg [1:0]             RRESP,
+    output reg                   RVALID,
+    input                        RREADY,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_00,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_01,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_02,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_03,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_04,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_05,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_06,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_07,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_08,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_09,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_0a,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_0b,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_0c,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_0d,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_0e,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_0f,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_10,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_11,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_12,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_13,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_14,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_15,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_16,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_17,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_18,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_19,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_1a,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_1b,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_1c,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_1d,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_1e,
+	 input [C_S_AXI_DATA_WIDTH-1:0]			reg_1f,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_80,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_81,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_82,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_83,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_84,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_85,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_86,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_87,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_ff,
+	 output reg [C_S_AXI_DATA_WIDTH-1:0]	reg_f0
+    );
+
+   localparam AXI_RESP_OK = 2'b00;
+   localparam AXI_RESP_SLVERR = 2'b10;
+   
+   localparam WRITE_IDLE = 0;
+   localparam WRITE_RESPONSE = 1;
+   localparam WRITE_DATA = 2;
+
+   localparam READ_IDLE = 0;
+   localparam READ_RESPONSE = 1;
+
+   reg [1:0]                     write_state, write_state_next;
+   reg [C_S_AXI_ADDR_WIDTH-1:0]          write_addr, write_addr_next;
+   reg [1:0]                     read_state, read_state_next;
+   reg [C_S_AXI_ADDR_WIDTH-1:0]          read_addr, read_addr_next;
+   reg [1:0]                     BRESP_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_80_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_81_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_82_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_83_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_84_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_85_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_86_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_87_next;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_ff_next; 
+	reg [C_S_AXI_DATA_WIDTH-1:0]	reg_f0_next;  
+   always @(*) begin
+      read_state_next = read_state;   
+      ARREADY = 1'b1;
+      read_addr_next = read_addr;
+      RDATA = 0; 
+      RRESP = AXI_RESP_OK;
+      RVALID = 1'b0;
+      
+      case(read_state)
+        READ_IDLE: begin
+           if(ARVALID) begin
+              read_addr_next = ARADDR;
+              read_state_next = READ_RESPONSE;
+           end
+        end        
+        
+        READ_RESPONSE: begin
+           RVALID = 1'b1;
+           ARREADY = 1'b0;
+
+           if(read_addr[7:0] == 8'h00) begin
+				  RDATA = reg_00;
+			  end
+			  else if(read_addr[7:0] == 8'h01) begin
+				  RDATA = reg_01;
+			  end
+			  else if(read_addr[7:0] == 8'h02) begin
+				  RDATA = reg_02;
+			  end
+			  else if(read_addr[7:0] == 8'h03) begin
+				  RDATA = reg_03;
+			  end
+			  else if(read_addr[7:0] == 8'h04) begin
+				  RDATA = reg_04;
+			  end
+			  else if(read_addr[7:0] == 8'h05) begin
+				  RDATA = reg_05;
+			  end
+			  else if(read_addr[7:0] == 8'h06) begin
+				  RDATA = reg_06;
+			  end
+			  else if(read_addr[7:0] == 8'h07) begin
+				  RDATA = reg_07;
+			  end
+			  else if(read_addr[7:0] == 8'h08) begin
+				  RDATA = reg_08;
+			  end
+			  else if(read_addr[7:0] == 8'h09) begin
+				  RDATA = reg_09;
+			  end
+			  else if(read_addr[7:0] == 8'h0a) begin
+				  RDATA = reg_0a;
+			  end
+			  else if(read_addr[7:0] == 8'h0b) begin
+				  RDATA = reg_0b;
+			  end
+			  else if(read_addr[7:0] == 8'h0c) begin
+				  RDATA = reg_0c;
+			  end
+			  else if(read_addr[7:0] == 8'h0d) begin
+				  RDATA = reg_0d;
+			  end
+			  else if(read_addr[7:0] == 8'h0e) begin
+				  RDATA = reg_0e;
+			  end
+			  else if(read_addr[7:0] == 8'h0f) begin
+				  RDATA = reg_0f;
+			  end
+			  else if(read_addr[7:0] == 8'h10) begin
+				  RDATA = reg_10;
+			  end
+			  else if(read_addr[7:0] == 8'h11) begin
+				  RDATA = reg_11;
+			  end
+			  else if(read_addr[7:0] == 8'h12) begin
+				  RDATA = reg_12;
+			  end
+			  else if(read_addr[7:0] == 8'h13) begin
+				  RDATA = reg_13;
+			  end
+			  else if(read_addr[7:0] == 8'h14) begin
+				  RDATA = reg_14;
+			  end
+			  else if(read_addr[7:0] == 8'h15) begin
+				  RDATA = reg_15;
+			  end
+			  else if(read_addr[7:0] == 8'h16) begin
+				  RDATA = reg_16;
+			  end
+			  else if(read_addr[7:0] == 8'h17) begin
+				  RDATA = reg_17;
+			  end
+			  else if(read_addr[7:0] == 8'h18) begin
+				  RDATA = reg_18;
+			  end
+			  else if(read_addr[7:0] == 8'h19) begin
+				  RDATA = reg_19;
+			  end
+			  else if(read_addr[7:0] == 8'h1a) begin
+				  RDATA = reg_1a;
+			  end
+			  else if(read_addr[7:0] == 8'h1b) begin
+				  RDATA = reg_1b;
+			  end
+			  else if(read_addr[7:0] == 8'h1c) begin
+				  RDATA = reg_1c;
+			  end
+			  else if(read_addr[7:0] == 8'h1d) begin
+				  RDATA = reg_1d;
+			  end
+			  else if(read_addr[7:0] == 8'h1e) begin
+				  RDATA = reg_1e;
+			  end
+			  else if(read_addr[7:0] == 8'h1f) begin
+				  RDATA = reg_1f;
+			  end
+			  else if(read_addr[7:0] == 8'h80) begin
+				  RDATA = reg_80;
+			  end
+			  else if(read_addr[7:0] == 8'h81) begin
+				  RDATA = reg_81;
+			  end
+			  else if(read_addr[7:0] == 8'h82) begin
+				  RDATA = reg_82;
+			  end
+			  else if(read_addr[7:0] == 8'h83) begin
+				  RDATA = reg_83;
+			  end
+			  else if(read_addr[7:0] == 8'h84) begin
+				  RDATA = reg_84;
+			  end
+			  else if(read_addr[7:0] == 8'h85) begin
+				  RDATA = reg_85;
+			  end
+			  else if(read_addr[7:0] == 8'h86) begin
+				  RDATA = reg_86;
+			  end
+			  else if(read_addr[7:0] == 8'h87) begin
+				  RDATA = reg_87;
+			  end
+			  else if(read_addr[7:0] == 8'hff) begin
+				  RDATA = reg_ff;
+			  end
+			  else if(read_addr[7:0] == 8'hf0) begin
+				  RDATA = reg_f0;
+			  end
+			  else begin
+				  RRESP = AXI_RESP_SLVERR;
+			  end
+
+           if(RREADY) begin
+              read_state_next = READ_IDLE;
+           end
+        end
+      endcase
+   end
+   
+   always @(*) begin
+      write_state_next = write_state;
+      write_addr_next = write_addr;
+		
+		reg_80_next = reg_80;
+		reg_81_next = reg_81;
+		reg_82_next = reg_82;
+		reg_83_next = reg_83;
+		reg_84_next = reg_84;
+		reg_85_next = reg_85;
+		reg_86_next = reg_86;
+		reg_87_next = reg_87;
+		reg_ff_next = reg_ff;
+		reg_f0_next = reg_f0;
+
+      AWREADY = 1'b1;
+      WREADY = 1'b0;
+      BVALID = 1'b0;  
+      BRESP_next = BRESP;
+
+      case(write_state)
+        WRITE_IDLE: begin
+           write_addr_next = AWADDR;
+           if(AWVALID) begin
+              write_state_next = WRITE_DATA;
+           end
+        end
+        WRITE_DATA: begin
+           AWREADY = 1'b0;
+           WREADY = 1'b1;
+           if(WVALID) begin
+              if(write_addr[7:0] == 8'h80) begin
+					  reg_80_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h81) begin
+					  reg_81_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h82) begin
+					  reg_82_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h83) begin
+					  reg_83_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h84) begin
+					  reg_84_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h85) begin
+					  reg_85_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h86) begin
+					  reg_86_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'h87) begin
+					  reg_87_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'hff) begin
+					  reg_ff_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else if(write_addr[7:0] == 8'hf0) begin
+					  reg_f0_next = WDATA;
+					  BRESP_next = AXI_RESP_OK;
+				  end
+				  else begin
+					  BRESP_next = AXI_RESP_SLVERR;
+				  end
+              write_state_next = WRITE_RESPONSE;
+           end
+        end
+        WRITE_RESPONSE: begin
+           AWREADY = 1'b0;
+           BVALID = 1'b1;
+           if(BREADY) begin                    
+              write_state_next = WRITE_IDLE;
+           end
+        end
+      endcase
+   end
+
+   always @(posedge ACLK) begin
+      if(~ARESETN) begin
+         write_state <= WRITE_IDLE;
+         read_state <= READ_IDLE;
+         read_addr <= 0;
+         write_addr <= 0;
+         BRESP <= AXI_RESP_OK;		
+			reg_80 <= 'b0;
+			reg_81 <= 'b0;
+			reg_82 <= 'b0;
+			reg_83 <= 'b0;
+			reg_84 <= 'b0;
+			reg_85 <= 'b0;
+			reg_86 <= 'b0;
+			reg_87 <= 'b0;
+			reg_ff <= 'b0;
+			reg_f0 <= 'b0;
+      end
+      else begin
+         write_state <= write_state_next;
+         write_addr <= write_addr_next;
+         read_state <= read_state_next;
+         read_addr <= read_addr_next;
+         BRESP <= BRESP_next;			
+			reg_80 <= reg_80_next;
+			reg_81 <= reg_81_next;
+			reg_82 <= reg_82_next;
+			reg_83 <= reg_83_next;
+			reg_84 <= reg_84_next;
+			reg_85 <= reg_85_next;
+			reg_86 <= reg_86_next;
+			reg_87 <= reg_87_next;
+			reg_ff <= reg_ff_next;
+			reg_f0 <= reg_f0_next;
+      end
+   end   
+
+endmodule
