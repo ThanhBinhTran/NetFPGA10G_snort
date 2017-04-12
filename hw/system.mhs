@@ -206,6 +206,7 @@ BEGIN proc_sys_reset
  PORT BUS_STRUCT_RESET = sys_bus_reset
  PORT Dcm_locked = dcm_locked
  PORT Peripheral_aresetn = Peripheral_aresetn
+ PORT Peripheral_Reset = reset_0_Peripheral_Reset
 END
 
 BEGIN axi_uartlite
@@ -288,9 +289,9 @@ BEGIN nf10_10g_interface
  PARAMETER C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC = 1
  PARAMETER C_BASEADDR = 0x77a60000
  PARAMETER C_HIGHADDR = 0x77a6ffff
+ BUS_INTERFACE S_AXI = axi_interconnect_0
  BUS_INTERFACE M_AXIS = nf10_10g_interface_1_M_AXIS
  BUS_INTERFACE S_AXIS = nf10_bram_output_queues_0_M_AXIS_1
- BUS_INTERFACE S_AXI = axi_interconnect_0
  PORT dclk = control_clk
  PORT xaui_tx_l3_n = nf10_10g_interface_1_xaui_tx_l3_n
  PORT xaui_tx_l1_n = nf10_10g_interface_1_xaui_tx_l1_n
@@ -451,12 +452,12 @@ BEGIN nf10_input_arbiter
  PARAMETER C_S_AXIS_DATA_WIDTH = 256
  PARAMETER C_BASEADDR = 0x77a00000
  PARAMETER C_HIGHADDR = 0x77a0ffff
+ BUS_INTERFACE S_AXIS_4 = dma_0_M_AXIS
+ BUS_INTERFACE S_AXI = axi_interconnect_0
  BUS_INTERFACE S_AXIS_0 = nf10_10g_interface_0_M_AXIS
  BUS_INTERFACE S_AXIS_1 = nf10_10g_interface_1_M_AXIS
  BUS_INTERFACE S_AXIS_2 = nf10_10g_interface_2_M_AXIS
  BUS_INTERFACE S_AXIS_3 = nf10_10g_interface_3_M_AXIS
- BUS_INTERFACE S_AXIS_4 = dma_0_M_AXIS
- BUS_INTERFACE S_AXI = axi_interconnect_0
  BUS_INTERFACE M_AXIS = nf10_input_arbiter_0_M_AXIS
  PORT axi_aclk = core_clk
  PORT axi_resetn = Peripheral_aresetn
@@ -469,13 +470,13 @@ BEGIN nf10_bram_output_queues
  PARAMETER C_S_AXIS_DATA_WIDTH = 256
  PARAMETER C_BASEADDR = 0x76600000
  PARAMETER C_HIGHADDR = 0x7660ffff
+ BUS_INTERFACE S_AXI = axi_interconnect_0
  BUS_INTERFACE S_AXIS = nf10_nic_output_port_lookup_0_M_AXIS
  BUS_INTERFACE M_AXIS_0 = nf10_bram_output_queues_0_M_AXIS_0
  BUS_INTERFACE M_AXIS_1 = nf10_bram_output_queues_0_M_AXIS_1
  BUS_INTERFACE M_AXIS_2 = nf10_bram_output_queues_0_M_AXIS_2
  BUS_INTERFACE M_AXIS_3 = nf10_bram_output_queues_0_M_AXIS_3
  BUS_INTERFACE M_AXIS_4 = nf10_bram_output_queues_0_M_AXIS_4
- BUS_INTERFACE S_AXI = axi_interconnect_0
  PORT axi_aclk = core_clk
  PORT axi_resetn = Peripheral_aresetn
 END
@@ -489,8 +490,8 @@ BEGIN nf10_nic_output_port_lookup
  PARAMETER C_BASEADDR = 0x75400000
  PARAMETER C_HIGHADDR = 0x7540ffff
  BUS_INTERFACE S_AXI = axi_interconnect_0
+ BUS_INTERFACE S_AXIS = management_0_M_AXIS
  BUS_INTERFACE M_AXIS = nf10_nic_output_port_lookup_0_M_AXIS
- BUS_INTERFACE S_AXIS = nf10_packet_decoder_0_M_AXIS_0
  PORT S_AXI_ACLK = core_clk
  PORT S_AXI_ARESETN = Peripheral_aresetn
  PORT axi_aclk = core_clk
@@ -506,8 +507,8 @@ BEGIN dma
  PARAMETER C_HIGHADDR = 0x7d40ffff
  BUS_INTERFACE M_AXI = axi_interconnect_0
  BUS_INTERFACE M_AXIS = dma_0_M_AXIS
- BUS_INTERFACE S_AXIS = nf10_bram_output_queues_0_M_AXIS_4
  BUS_INTERFACE S_AXI = axi_interconnect_0
+ BUS_INTERFACE S_AXIS = nf10_bram_output_queues_0_M_AXIS_4
  PORT reset_n = Peripheral_aresetn
  PORT M_AXIS_ACLK = core_clk
  PORT S_AXIS_ACLK = core_clk
@@ -606,8 +607,9 @@ BEGIN nf10_packet_decoder
  PARAMETER C_BASEADDR = 0x77600000
  PARAMETER C_HIGHADDR = 0x7760ffff
  BUS_INTERFACE S_AXI = axi_interconnect_0
- BUS_INTERFACE S_AXIS_0 = nf10_input_arbiter_0_M_AXIS
  BUS_INTERFACE M_AXIS_0 = nf10_packet_decoder_0_M_AXIS_0
+ BUS_INTERFACE M_AXIS_1 = nf10_packet_decoder_0_M_AXIS_1
+ BUS_INTERFACE S_AXIS_0 = nf10_input_arbiter_0_M_AXIS
  PORT axi_aclk = core_clk
  PORT axi_resetn = Peripheral_aresetn
 END
@@ -615,5 +617,32 @@ END
 BEGIN header_engine
  PARAMETER INSTANCE = header_engine_0
  PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x0000003F
+ BUS_INTERFACE S_AXI = axi_interconnect_0
+ BUS_INTERFACE M_AXIS = header_engine_0_M_AXIS
+ BUS_INTERFACE S_AXIS = nf10_packet_decoder_0_M_AXIS_0
+ PORT s_axi_aresetn = Peripheral_aresetn
+END
+
+BEGIN management
+ PARAMETER INSTANCE = management_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x0000003F
+ BUS_INTERFACE S_AXIS_1 = payload_engine_0_M_AXIS
+ BUS_INTERFACE S_AXIS_0 = header_engine_0_M_AXIS
+ BUS_INTERFACE M_AXIS = management_0_M_AXIS
+ PORT s_axi_aresetn = Peripheral_aresetn
+END
+
+BEGIN payload_engine
+ PARAMETER INSTANCE = payload_engine_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x0000003F
+ BUS_INTERFACE M_AXIS = payload_engine_0_M_AXIS
+ BUS_INTERFACE S_AXIS = nf10_packet_decoder_0_M_AXIS_1
+ PORT s_axi_aresetn = Peripheral_aresetn
 END
 

@@ -404,12 +404,6 @@ module system
   wire [0:31] net_gnd32;
   wire [127:0] net_gnd128;
   wire [255:0] net_gnd256;
-  wire [255:0] nf10_10g_interface_0_M_AXIS_TDATA;
-  wire nf10_10g_interface_0_M_AXIS_TLAST;
-  wire nf10_10g_interface_0_M_AXIS_TREADY;
-  wire [31:0] nf10_10g_interface_0_M_AXIS_TSTRB;
-  wire [127:0] nf10_10g_interface_0_M_AXIS_TUSER;
-  wire nf10_10g_interface_0_M_AXIS_TVALID;
   wire nf10_10g_interface_0_xaui_rx_l0_n;
   wire nf10_10g_interface_0_xaui_rx_l0_p;
   wire nf10_10g_interface_0_xaui_rx_l1_n;
@@ -426,12 +420,6 @@ module system
   wire nf10_10g_interface_0_xaui_tx_l2_p;
   wire nf10_10g_interface_0_xaui_tx_l3_n;
   wire nf10_10g_interface_0_xaui_tx_l3_p;
-  wire [255:0] nf10_10g_interface_1_M_AXIS_TDATA;
-  wire nf10_10g_interface_1_M_AXIS_TLAST;
-  wire nf10_10g_interface_1_M_AXIS_TREADY;
-  wire [31:0] nf10_10g_interface_1_M_AXIS_TSTRB;
-  wire [127:0] nf10_10g_interface_1_M_AXIS_TUSER;
-  wire nf10_10g_interface_1_M_AXIS_TVALID;
   wire nf10_10g_interface_1_xaui_rx_l0_n;
   wire nf10_10g_interface_1_xaui_rx_l0_p;
   wire nf10_10g_interface_1_xaui_rx_l1_n;
@@ -448,12 +436,6 @@ module system
   wire nf10_10g_interface_1_xaui_tx_l2_p;
   wire nf10_10g_interface_1_xaui_tx_l3_n;
   wire nf10_10g_interface_1_xaui_tx_l3_p;
-  wire [255:0] nf10_10g_interface_2_M_AXIS_TDATA;
-  wire nf10_10g_interface_2_M_AXIS_TLAST;
-  wire nf10_10g_interface_2_M_AXIS_TREADY;
-  wire [31:0] nf10_10g_interface_2_M_AXIS_TSTRB;
-  wire [127:0] nf10_10g_interface_2_M_AXIS_TUSER;
-  wire nf10_10g_interface_2_M_AXIS_TVALID;
   wire nf10_10g_interface_2_xaui_rx_l0_n;
   wire nf10_10g_interface_2_xaui_rx_l0_p;
   wire nf10_10g_interface_2_xaui_rx_l1_n;
@@ -470,12 +452,6 @@ module system
   wire nf10_10g_interface_2_xaui_tx_l2_p;
   wire nf10_10g_interface_2_xaui_tx_l3_n;
   wire nf10_10g_interface_2_xaui_tx_l3_p;
-  wire [255:0] nf10_10g_interface_3_M_AXIS_TDATA;
-  wire nf10_10g_interface_3_M_AXIS_TLAST;
-  wire nf10_10g_interface_3_M_AXIS_TREADY;
-  wire [31:0] nf10_10g_interface_3_M_AXIS_TSTRB;
-  wire [127:0] nf10_10g_interface_3_M_AXIS_TUSER;
-  wire nf10_10g_interface_3_M_AXIS_TVALID;
   wire nf10_10g_interface_3_xaui_rx_l0_n;
   wire nf10_10g_interface_3_xaui_rx_l0_p;
   wire nf10_10g_interface_3_xaui_rx_l1_n;
@@ -516,29 +492,11 @@ module system
   wire [31:0] nf10_bram_output_queues_0_M_AXIS_3_TSTRB;
   wire [127:0] nf10_bram_output_queues_0_M_AXIS_3_TUSER;
   wire nf10_bram_output_queues_0_M_AXIS_3_TVALID;
-  wire [255:0] nf10_bram_output_queues_0_M_AXIS_4_TDATA;
-  wire nf10_bram_output_queues_0_M_AXIS_4_TLAST;
-  wire nf10_bram_output_queues_0_M_AXIS_4_TREADY;
-  wire [31:0] nf10_bram_output_queues_0_M_AXIS_4_TSTRB;
-  wire [127:0] nf10_bram_output_queues_0_M_AXIS_4_TUSER;
-  wire nf10_bram_output_queues_0_M_AXIS_4_TVALID;
-  wire [255:0] nf10_input_arbiter_0_M_AXIS_TDATA;
-  wire nf10_input_arbiter_0_M_AXIS_TLAST;
-  wire nf10_input_arbiter_0_M_AXIS_TREADY;
-  wire [31:0] nf10_input_arbiter_0_M_AXIS_TSTRB;
-  wire [127:0] nf10_input_arbiter_0_M_AXIS_TUSER;
-  wire nf10_input_arbiter_0_M_AXIS_TVALID;
   wire nf10_mdio_0_PHY_MDC;
   wire nf10_mdio_0_PHY_MDIO_I;
   wire nf10_mdio_0_PHY_MDIO_O;
   wire nf10_mdio_0_PHY_MDIO_T;
   wire nf10_mdio_0_PHY_rst_n;
-  wire [255:0] nf10_nic_output_port_lookup_0_M_AXIS_TDATA;
-  wire nf10_nic_output_port_lookup_0_M_AXIS_TLAST;
-  wire nf10_nic_output_port_lookup_0_M_AXIS_TREADY;
-  wire [31:0] nf10_nic_output_port_lookup_0_M_AXIS_TSTRB;
-  wire [127:0] nf10_nic_output_port_lookup_0_M_AXIS_TUSER;
-  wire nf10_nic_output_port_lookup_0_M_AXIS_TVALID;
   wire [255:0] nf10_packet_decoder_0_M_AXIS_0_TDATA;
   wire nf10_packet_decoder_0_M_AXIS_0_TLAST;
   wire nf10_packet_decoder_0_M_AXIS_0_TREADY;
@@ -1692,18 +1650,18 @@ module system
     nf10_10g_interface_0 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .m_axis_tdata ( nf10_10g_interface_0_M_AXIS_TDATA ),
-      .m_axis_tstrb ( nf10_10g_interface_0_M_AXIS_TSTRB ),
-      .m_axis_tuser ( nf10_10g_interface_0_M_AXIS_TUSER ),
-      .m_axis_tvalid ( nf10_10g_interface_0_M_AXIS_TVALID ),
-      .m_axis_tready ( nf10_10g_interface_0_M_AXIS_TREADY ),
-      .m_axis_tlast ( nf10_10g_interface_0_M_AXIS_TLAST ),
-      .s_axis_tdata ( nf10_bram_output_queues_0_M_AXIS_0_TDATA ),
-      .s_axis_tstrb ( nf10_bram_output_queues_0_M_AXIS_0_TSTRB ),
-      .s_axis_tuser ( nf10_bram_output_queues_0_M_AXIS_0_TUSER ),
-      .s_axis_tvalid ( nf10_bram_output_queues_0_M_AXIS_0_TVALID ),
-      .s_axis_tready ( nf10_bram_output_queues_0_M_AXIS_0_TREADY ),
-      .s_axis_tlast ( nf10_bram_output_queues_0_M_AXIS_0_TLAST ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
+      .s_axis_tdata ( net_gnd256 ),
+      .s_axis_tstrb ( net_gnd32[0:31] ),
+      .s_axis_tuser ( net_gnd128 ),
+      .s_axis_tvalid ( net_gnd0 ),
+      .s_axis_tready (  ),
+      .s_axis_tlast ( net_gnd0 ),
       .S_AXI_ACLK ( control_clk ),
       .S_AXI_AWADDR ( axi_interconnect_0_M_AWADDR[63:32] ),
       .S_AXI_AWVALID ( axi_interconnect_0_M_AWVALID[1] ),
@@ -1747,18 +1705,18 @@ module system
     nf10_10g_interface_1 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .m_axis_tdata ( nf10_10g_interface_1_M_AXIS_TDATA ),
-      .m_axis_tstrb ( nf10_10g_interface_1_M_AXIS_TSTRB ),
-      .m_axis_tuser ( nf10_10g_interface_1_M_AXIS_TUSER ),
-      .m_axis_tvalid ( nf10_10g_interface_1_M_AXIS_TVALID ),
-      .m_axis_tready ( nf10_10g_interface_1_M_AXIS_TREADY ),
-      .m_axis_tlast ( nf10_10g_interface_1_M_AXIS_TLAST ),
-      .s_axis_tdata ( nf10_bram_output_queues_0_M_AXIS_1_TDATA ),
-      .s_axis_tstrb ( nf10_bram_output_queues_0_M_AXIS_1_TSTRB ),
-      .s_axis_tuser ( nf10_bram_output_queues_0_M_AXIS_1_TUSER ),
-      .s_axis_tvalid ( nf10_bram_output_queues_0_M_AXIS_1_TVALID ),
-      .s_axis_tready ( nf10_bram_output_queues_0_M_AXIS_1_TREADY ),
-      .s_axis_tlast ( nf10_bram_output_queues_0_M_AXIS_1_TLAST ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
+      .s_axis_tdata ( net_gnd256 ),
+      .s_axis_tstrb ( net_gnd32[0:31] ),
+      .s_axis_tuser ( net_gnd128 ),
+      .s_axis_tvalid ( net_gnd0 ),
+      .s_axis_tready (  ),
+      .s_axis_tlast ( net_gnd0 ),
       .S_AXI_ACLK ( control_clk ),
       .S_AXI_AWADDR ( axi_interconnect_0_M_AWADDR[95:64] ),
       .S_AXI_AWVALID ( axi_interconnect_0_M_AWVALID[2] ),
@@ -1802,18 +1760,18 @@ module system
     nf10_10g_interface_2 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .m_axis_tdata ( nf10_10g_interface_2_M_AXIS_TDATA ),
-      .m_axis_tstrb ( nf10_10g_interface_2_M_AXIS_TSTRB ),
-      .m_axis_tuser ( nf10_10g_interface_2_M_AXIS_TUSER ),
-      .m_axis_tvalid ( nf10_10g_interface_2_M_AXIS_TVALID ),
-      .m_axis_tready ( nf10_10g_interface_2_M_AXIS_TREADY ),
-      .m_axis_tlast ( nf10_10g_interface_2_M_AXIS_TLAST ),
-      .s_axis_tdata ( nf10_bram_output_queues_0_M_AXIS_2_TDATA ),
-      .s_axis_tstrb ( nf10_bram_output_queues_0_M_AXIS_2_TSTRB ),
-      .s_axis_tuser ( nf10_bram_output_queues_0_M_AXIS_2_TUSER ),
-      .s_axis_tvalid ( nf10_bram_output_queues_0_M_AXIS_2_TVALID ),
-      .s_axis_tready ( nf10_bram_output_queues_0_M_AXIS_2_TREADY ),
-      .s_axis_tlast ( nf10_bram_output_queues_0_M_AXIS_2_TLAST ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
+      .s_axis_tdata ( net_gnd256 ),
+      .s_axis_tstrb ( net_gnd32[0:31] ),
+      .s_axis_tuser ( net_gnd128 ),
+      .s_axis_tvalid ( net_gnd0 ),
+      .s_axis_tready (  ),
+      .s_axis_tlast ( net_gnd0 ),
       .S_AXI_ACLK ( control_clk ),
       .S_AXI_AWADDR ( axi_interconnect_0_M_AWADDR[127:96] ),
       .S_AXI_AWVALID ( axi_interconnect_0_M_AWVALID[3] ),
@@ -1857,18 +1815,18 @@ module system
     nf10_10g_interface_3 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .m_axis_tdata ( nf10_10g_interface_3_M_AXIS_TDATA ),
-      .m_axis_tstrb ( nf10_10g_interface_3_M_AXIS_TSTRB ),
-      .m_axis_tuser ( nf10_10g_interface_3_M_AXIS_TUSER ),
-      .m_axis_tvalid ( nf10_10g_interface_3_M_AXIS_TVALID ),
-      .m_axis_tready ( nf10_10g_interface_3_M_AXIS_TREADY ),
-      .m_axis_tlast ( nf10_10g_interface_3_M_AXIS_TLAST ),
-      .s_axis_tdata ( nf10_bram_output_queues_0_M_AXIS_3_TDATA ),
-      .s_axis_tstrb ( nf10_bram_output_queues_0_M_AXIS_3_TSTRB ),
-      .s_axis_tuser ( nf10_bram_output_queues_0_M_AXIS_3_TUSER ),
-      .s_axis_tvalid ( nf10_bram_output_queues_0_M_AXIS_3_TVALID ),
-      .s_axis_tready ( nf10_bram_output_queues_0_M_AXIS_3_TREADY ),
-      .s_axis_tlast ( nf10_bram_output_queues_0_M_AXIS_3_TLAST ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
+      .s_axis_tdata ( net_gnd256 ),
+      .s_axis_tstrb ( net_gnd32[0:31] ),
+      .s_axis_tuser ( net_gnd128 ),
+      .s_axis_tvalid ( net_gnd0 ),
+      .s_axis_tready (  ),
+      .s_axis_tlast ( net_gnd0 ),
       .S_AXI_ACLK ( control_clk ),
       .S_AXI_AWADDR ( axi_interconnect_0_M_AWADDR[159:128] ),
       .S_AXI_AWVALID ( axi_interconnect_0_M_AWVALID[4] ),
@@ -2016,36 +1974,36 @@ module system
     nf10_input_arbiter_0 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .m_axis_tdata ( nf10_input_arbiter_0_M_AXIS_TDATA ),
-      .m_axis_tstrb ( nf10_input_arbiter_0_M_AXIS_TSTRB ),
-      .m_axis_tuser ( nf10_input_arbiter_0_M_AXIS_TUSER ),
-      .m_axis_tvalid ( nf10_input_arbiter_0_M_AXIS_TVALID ),
-      .m_axis_tready ( nf10_input_arbiter_0_M_AXIS_TREADY ),
-      .m_axis_tlast ( nf10_input_arbiter_0_M_AXIS_TLAST ),
-      .s_axis_tdata_0 ( nf10_10g_interface_0_M_AXIS_TDATA ),
-      .s_axis_tstrb_0 ( nf10_10g_interface_0_M_AXIS_TSTRB ),
-      .s_axis_tuser_0 ( nf10_10g_interface_0_M_AXIS_TUSER ),
-      .s_axis_tvalid_0 ( nf10_10g_interface_0_M_AXIS_TVALID ),
-      .s_axis_tready_0 ( nf10_10g_interface_0_M_AXIS_TREADY ),
-      .s_axis_tlast_0 ( nf10_10g_interface_0_M_AXIS_TLAST ),
-      .s_axis_tdata_1 ( nf10_10g_interface_1_M_AXIS_TDATA ),
-      .s_axis_tstrb_1 ( nf10_10g_interface_1_M_AXIS_TSTRB ),
-      .s_axis_tuser_1 ( nf10_10g_interface_1_M_AXIS_TUSER ),
-      .s_axis_tvalid_1 ( nf10_10g_interface_1_M_AXIS_TVALID ),
-      .s_axis_tready_1 ( nf10_10g_interface_1_M_AXIS_TREADY ),
-      .s_axis_tlast_1 ( nf10_10g_interface_1_M_AXIS_TLAST ),
-      .s_axis_tdata_2 ( nf10_10g_interface_2_M_AXIS_TDATA ),
-      .s_axis_tstrb_2 ( nf10_10g_interface_2_M_AXIS_TSTRB ),
-      .s_axis_tuser_2 ( nf10_10g_interface_2_M_AXIS_TUSER ),
-      .s_axis_tvalid_2 ( nf10_10g_interface_2_M_AXIS_TVALID ),
-      .s_axis_tready_2 ( nf10_10g_interface_2_M_AXIS_TREADY ),
-      .s_axis_tlast_2 ( nf10_10g_interface_2_M_AXIS_TLAST ),
-      .s_axis_tdata_3 ( nf10_10g_interface_3_M_AXIS_TDATA ),
-      .s_axis_tstrb_3 ( nf10_10g_interface_3_M_AXIS_TSTRB ),
-      .s_axis_tuser_3 ( nf10_10g_interface_3_M_AXIS_TUSER ),
-      .s_axis_tvalid_3 ( nf10_10g_interface_3_M_AXIS_TVALID ),
-      .s_axis_tready_3 ( nf10_10g_interface_3_M_AXIS_TREADY ),
-      .s_axis_tlast_3 ( nf10_10g_interface_3_M_AXIS_TLAST ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
+      .s_axis_tdata_0 ( nf10_bram_output_queues_0_M_AXIS_0_TDATA ),
+      .s_axis_tstrb_0 ( nf10_bram_output_queues_0_M_AXIS_0_TSTRB ),
+      .s_axis_tuser_0 ( nf10_bram_output_queues_0_M_AXIS_0_TUSER ),
+      .s_axis_tvalid_0 ( nf10_bram_output_queues_0_M_AXIS_0_TVALID ),
+      .s_axis_tready_0 ( nf10_bram_output_queues_0_M_AXIS_0_TREADY ),
+      .s_axis_tlast_0 ( nf10_bram_output_queues_0_M_AXIS_0_TLAST ),
+      .s_axis_tdata_1 ( nf10_bram_output_queues_0_M_AXIS_1_TDATA ),
+      .s_axis_tstrb_1 ( nf10_bram_output_queues_0_M_AXIS_1_TSTRB ),
+      .s_axis_tuser_1 ( nf10_bram_output_queues_0_M_AXIS_1_TUSER ),
+      .s_axis_tvalid_1 ( nf10_bram_output_queues_0_M_AXIS_1_TVALID ),
+      .s_axis_tready_1 ( nf10_bram_output_queues_0_M_AXIS_1_TREADY ),
+      .s_axis_tlast_1 ( nf10_bram_output_queues_0_M_AXIS_1_TLAST ),
+      .s_axis_tdata_2 ( nf10_bram_output_queues_0_M_AXIS_2_TDATA ),
+      .s_axis_tstrb_2 ( nf10_bram_output_queues_0_M_AXIS_2_TSTRB ),
+      .s_axis_tuser_2 ( nf10_bram_output_queues_0_M_AXIS_2_TUSER ),
+      .s_axis_tvalid_2 ( nf10_bram_output_queues_0_M_AXIS_2_TVALID ),
+      .s_axis_tready_2 ( nf10_bram_output_queues_0_M_AXIS_2_TREADY ),
+      .s_axis_tlast_2 ( nf10_bram_output_queues_0_M_AXIS_2_TLAST ),
+      .s_axis_tdata_3 ( nf10_bram_output_queues_0_M_AXIS_3_TDATA ),
+      .s_axis_tstrb_3 ( nf10_bram_output_queues_0_M_AXIS_3_TSTRB ),
+      .s_axis_tuser_3 ( nf10_bram_output_queues_0_M_AXIS_3_TUSER ),
+      .s_axis_tvalid_3 ( nf10_bram_output_queues_0_M_AXIS_3_TVALID ),
+      .s_axis_tready_3 ( nf10_bram_output_queues_0_M_AXIS_3_TREADY ),
+      .s_axis_tlast_3 ( nf10_bram_output_queues_0_M_AXIS_3_TLAST ),
       .s_axis_tdata_4 ( dma_0_M_AXIS_TDATA ),
       .s_axis_tstrb_4 ( dma_0_M_AXIS_TSTRB ),
       .s_axis_tuser_4 ( dma_0_M_AXIS_TUSER ),
@@ -2076,12 +2034,12 @@ module system
     nf10_bram_output_queues_0 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .s_axis_tdata ( nf10_nic_output_port_lookup_0_M_AXIS_TDATA ),
-      .s_axis_tstrb ( nf10_nic_output_port_lookup_0_M_AXIS_TSTRB ),
-      .s_axis_tuser ( nf10_nic_output_port_lookup_0_M_AXIS_TUSER ),
-      .s_axis_tvalid ( nf10_nic_output_port_lookup_0_M_AXIS_TVALID ),
-      .s_axis_tready ( nf10_nic_output_port_lookup_0_M_AXIS_TREADY ),
-      .s_axis_tlast ( nf10_nic_output_port_lookup_0_M_AXIS_TLAST ),
+      .s_axis_tdata ( net_gnd256 ),
+      .s_axis_tstrb ( net_gnd32[0:31] ),
+      .s_axis_tuser ( net_gnd128 ),
+      .s_axis_tvalid ( net_gnd0 ),
+      .s_axis_tready (  ),
+      .s_axis_tlast ( net_gnd0 ),
       .m_axis_tdata_0 ( nf10_bram_output_queues_0_M_AXIS_0_TDATA ),
       .m_axis_tstrb_0 ( nf10_bram_output_queues_0_M_AXIS_0_TSTRB ),
       .m_axis_tuser_0 ( nf10_bram_output_queues_0_M_AXIS_0_TUSER ),
@@ -2106,12 +2064,12 @@ module system
       .m_axis_tvalid_3 ( nf10_bram_output_queues_0_M_AXIS_3_TVALID ),
       .m_axis_tready_3 ( nf10_bram_output_queues_0_M_AXIS_3_TREADY ),
       .m_axis_tlast_3 ( nf10_bram_output_queues_0_M_AXIS_3_TLAST ),
-      .m_axis_tdata_4 ( nf10_bram_output_queues_0_M_AXIS_4_TDATA ),
-      .m_axis_tstrb_4 ( nf10_bram_output_queues_0_M_AXIS_4_TSTRB ),
-      .m_axis_tuser_4 ( nf10_bram_output_queues_0_M_AXIS_4_TUSER ),
-      .m_axis_tvalid_4 ( nf10_bram_output_queues_0_M_AXIS_4_TVALID ),
-      .m_axis_tready_4 ( nf10_bram_output_queues_0_M_AXIS_4_TREADY ),
-      .m_axis_tlast_4 ( nf10_bram_output_queues_0_M_AXIS_4_TLAST ),
+      .m_axis_tdata_4 (  ),
+      .m_axis_tstrb_4 (  ),
+      .m_axis_tuser_4 (  ),
+      .m_axis_tvalid_4 (  ),
+      .m_axis_tready_4 ( net_gnd0 ),
+      .m_axis_tlast_4 (  ),
       .S_AXI_AWADDR ( axi_interconnect_0_M_AWADDR[287:256] ),
       .S_AXI_AWVALID ( axi_interconnect_0_M_AWVALID[8] ),
       .S_AXI_WDATA ( axi_interconnect_0_M_WDATA[287:256] ),
@@ -2136,12 +2094,12 @@ module system
     nf10_nic_output_port_lookup_0 (
       .axi_aclk ( core_clk ),
       .axi_resetn ( Peripheral_aresetn[0] ),
-      .m_axis_tdata ( nf10_nic_output_port_lookup_0_M_AXIS_TDATA ),
-      .m_axis_tstrb ( nf10_nic_output_port_lookup_0_M_AXIS_TSTRB ),
-      .m_axis_tuser ( nf10_nic_output_port_lookup_0_M_AXIS_TUSER ),
-      .m_axis_tvalid ( nf10_nic_output_port_lookup_0_M_AXIS_TVALID ),
-      .m_axis_tready ( nf10_nic_output_port_lookup_0_M_AXIS_TREADY ),
-      .m_axis_tlast ( nf10_nic_output_port_lookup_0_M_AXIS_TLAST ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
       .s_axis_tdata ( nf10_packet_decoder_0_M_AXIS_0_TDATA ),
       .s_axis_tstrb ( nf10_packet_decoder_0_M_AXIS_0_TSTRB ),
       .s_axis_tuser ( nf10_packet_decoder_0_M_AXIS_0_TUSER ),
@@ -2253,12 +2211,12 @@ module system
       .M_AXIS_TREADY ( dma_0_M_AXIS_TREADY ),
       .M_AXIS_TLAST ( dma_0_M_AXIS_TLAST ),
       .S_AXIS_ACLK ( core_clk ),
-      .S_AXIS_TDATA ( nf10_bram_output_queues_0_M_AXIS_4_TDATA ),
-      .S_AXIS_TSTRB ( nf10_bram_output_queues_0_M_AXIS_4_TSTRB ),
-      .S_AXIS_TUSER ( nf10_bram_output_queues_0_M_AXIS_4_TUSER ),
-      .S_AXIS_TVALID ( nf10_bram_output_queues_0_M_AXIS_4_TVALID ),
-      .S_AXIS_TREADY ( nf10_bram_output_queues_0_M_AXIS_4_TREADY ),
-      .S_AXIS_TLAST ( nf10_bram_output_queues_0_M_AXIS_4_TLAST )
+      .S_AXIS_TDATA ( net_gnd256 ),
+      .S_AXIS_TSTRB ( net_gnd32[0:31] ),
+      .S_AXIS_TUSER ( net_gnd128 ),
+      .S_AXIS_TVALID ( net_gnd0 ),
+      .S_AXIS_TREADY (  ),
+      .S_AXIS_TLAST ( net_gnd0 )
     );
 
   (* BOX_TYPE = "user_black_box" *)
@@ -2412,12 +2370,12 @@ module system
       .m_axis_tvalid_1 (  ),
       .m_axis_tready_1 ( net_gnd0 ),
       .m_axis_tlast_1 (  ),
-      .s_axis_tdata_0 ( nf10_input_arbiter_0_M_AXIS_TDATA ),
-      .s_axis_tstrb_0 ( nf10_input_arbiter_0_M_AXIS_TSTRB ),
-      .s_axis_tuser_0 ( nf10_input_arbiter_0_M_AXIS_TUSER ),
-      .s_axis_tvalid_0 ( nf10_input_arbiter_0_M_AXIS_TVALID ),
-      .s_axis_tready_0 ( nf10_input_arbiter_0_M_AXIS_TREADY ),
-      .s_axis_tlast_0 ( nf10_input_arbiter_0_M_AXIS_TLAST ),
+      .s_axis_tdata_0 ( net_gnd256 ),
+      .s_axis_tstrb_0 ( net_gnd32[0:31] ),
+      .s_axis_tuser_0 ( net_gnd128 ),
+      .s_axis_tvalid_0 ( net_gnd0 ),
+      .s_axis_tready_0 (  ),
+      .s_axis_tlast_0 ( net_gnd0 ),
       .s_axis_tdata_1 ( net_gnd256 ),
       .s_axis_tstrb_1 ( net_gnd32[0:31] ),
       .s_axis_tuser_1 ( net_gnd128 ),
@@ -2446,6 +2404,42 @@ module system
   (* BOX_TYPE = "user_black_box" *)
   header_engine_0_wrapper
     header_engine_0 (
+      .s_axi_aclk ( net_gnd0 ),
+      .s_axi_aresetn ( net_gnd0 ),
+      .s_axi_awaddr ( net_gnd32[0:31] ),
+      .s_axi_awvalid ( net_gnd0 ),
+      .s_axi_wdata ( net_gnd32[0:31] ),
+      .s_axi_wstrb ( net_gnd4[0:3] ),
+      .s_axi_wvalid ( net_gnd0 ),
+      .s_axi_bready ( net_gnd0 ),
+      .s_axi_araddr ( net_gnd32[0:31] ),
+      .s_axi_arvalid ( net_gnd0 ),
+      .s_axi_rready ( net_gnd0 ),
+      .s_axi_arready (  ),
+      .s_axi_rdata (  ),
+      .s_axi_rresp (  ),
+      .s_axi_rvalid (  ),
+      .s_axi_wready (  ),
+      .s_axi_bresp (  ),
+      .s_axi_bvalid (  ),
+      .s_axi_awready (  ),
+      .m_axis_tdata (  ),
+      .m_axis_tstrb (  ),
+      .m_axis_tuser (  ),
+      .m_axis_tvalid (  ),
+      .m_axis_tready ( net_gnd0 ),
+      .m_axis_tlast (  ),
+      .s_axis_tdata ( net_gnd256 ),
+      .s_axis_tstrb ( net_gnd32[0:31] ),
+      .s_axis_tuser ( net_gnd128 ),
+      .s_axis_tvalid ( net_gnd0 ),
+      .s_axis_tready (  ),
+      .s_axis_tlast ( net_gnd0 )
+    );
+
+  (* BOX_TYPE = "user_black_box" *)
+  payload_engine_0_wrapper
+    payload_engine_0 (
       .s_axi_aclk ( net_gnd0 ),
       .s_axi_aresetn ( net_gnd0 ),
       .s_axi_awaddr ( net_gnd32[0:31] ),
@@ -5928,6 +5922,73 @@ module nf10_packet_decoder_0_wrapper
 endmodule
 
 module header_engine_0_wrapper
+  (
+    s_axi_aclk,
+    s_axi_aresetn,
+    s_axi_awaddr,
+    s_axi_awvalid,
+    s_axi_wdata,
+    s_axi_wstrb,
+    s_axi_wvalid,
+    s_axi_bready,
+    s_axi_araddr,
+    s_axi_arvalid,
+    s_axi_rready,
+    s_axi_arready,
+    s_axi_rdata,
+    s_axi_rresp,
+    s_axi_rvalid,
+    s_axi_wready,
+    s_axi_bresp,
+    s_axi_bvalid,
+    s_axi_awready,
+    m_axis_tdata,
+    m_axis_tstrb,
+    m_axis_tuser,
+    m_axis_tvalid,
+    m_axis_tready,
+    m_axis_tlast,
+    s_axis_tdata,
+    s_axis_tstrb,
+    s_axis_tuser,
+    s_axis_tvalid,
+    s_axis_tready,
+    s_axis_tlast
+  );
+  input s_axi_aclk;
+  input s_axi_aresetn;
+  input [31:0] s_axi_awaddr;
+  input s_axi_awvalid;
+  input [31:0] s_axi_wdata;
+  input [3:0] s_axi_wstrb;
+  input s_axi_wvalid;
+  input s_axi_bready;
+  input [31:0] s_axi_araddr;
+  input s_axi_arvalid;
+  input s_axi_rready;
+  output s_axi_arready;
+  output [31:0] s_axi_rdata;
+  output [1:0] s_axi_rresp;
+  output s_axi_rvalid;
+  output s_axi_wready;
+  output [1:0] s_axi_bresp;
+  output s_axi_bvalid;
+  output s_axi_awready;
+  output [255:0] m_axis_tdata;
+  output [31:0] m_axis_tstrb;
+  output [127:0] m_axis_tuser;
+  output m_axis_tvalid;
+  input m_axis_tready;
+  output m_axis_tlast;
+  input [255:0] s_axis_tdata;
+  input [31:0] s_axis_tstrb;
+  input [127:0] s_axis_tuser;
+  input s_axis_tvalid;
+  output s_axis_tready;
+  input s_axis_tlast;
+endmodule
+
+module payload_engine_0_wrapper
   (
     s_axi_aclk,
     s_axi_aresetn,

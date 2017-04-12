@@ -145,8 +145,8 @@ module user_logic
        .prot(),
        .soh(),
        .eoh(),
-       .rst(s_axi_aresetn),
-       .clk(s_axi_aclk),
+       .rst(axi_aresetn),
+       .clk(axi_aclk),
        .hReady(),
 
        //Interface with Management Module
