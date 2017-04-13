@@ -1,0 +1,11 @@
+-p
+xc5vtx240tff1759-2
+-lang
+verilog
+-intstyle
+default
+-lp
+/home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+-msg
+__xps/ise/xmsgprops.lst
+system.mhs
