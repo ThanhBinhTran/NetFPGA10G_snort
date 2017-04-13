@@ -1,0 +1,130 @@
+Release 13.4 - platgen Xilinx EDK 13.4 Build EDK_O.87xd
+ (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc5vtx240tff1759-2 -lang verilog -intstyle default -lp
+/home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+-msg __xps/ise/xmsgprops.lst system.mhs 
+
+WARNING:EDK - INFO:Security:67 - XILINXD_LICENSE_FILE is set to
+   '/opt/Xilinx/Vivado/2014.4/data/ip/core_licenses:/home/netfpga/.Xilinx' in
+   /home/netfpga/.flexlmrc.
+   INFO:Security:71 - If a license for part 'xc5vtx240t' is available, it will
+   be possible to use 'XPS_TDP' instead of 'XPS'.
+   WARNING:Security:42 - Your software subscription period has lapsed. Your
+   current version of Xilinx tools will continue to function, but you no longer
+   qualify for Xilinx software updates or new releases.
+
+
+Parse
+/home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/projects/N
+etFPGA10G_snort/hw/system.mhs ...
+
+Read MPD definitions ...
+Instance name for AXI EMC core 
+
+Overriding IP level properties ...
+
+INTERNAL ERROR: C_FAMILY value virtex5 not supported by axi_interconnect.
+All data-path FIFOs (if any) are implemented as LUT RAM.
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+   xilinx/pcores/microblaze_v8_00_b/data/microblaze_v2_1_0.mpd line 182 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+   xilinx/pcores/microblaze_v8_00_b/data/microblaze_v2_1_0.mpd line 320 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+   xilinx/pcores/microblaze_v8_00_b/data/microblaze_v2_1_0.mpd line 343 
+
+Computing clock values...
+INFO:EDK - Frequency for Top-Level Input Clock 'CLK' is not specified. Clock
+   DRCs will not be performed for IPs connected to that clock port, unless they
+   are connected through the clock generator IP. 
+
+INFO:EDK - Cannot determine the input clock associated with port :
+   diff_input_buf_0:SINGLE_ENDED_INPUT. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK - Cannot determine the input clock associated with port :
+   diff_input_buf_1:SINGLE_ENDED_INPUT. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK - Cannot determine the input clock associated with port :
+   diff_input_buf_2:SINGLE_ENDED_INPUT. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK - Cannot determine the input clock associated with port :
+   diff_input_buf_3:SINGLE_ENDED_INPUT. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK - Did not update the value for parameter:
+   header_engine_0:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be
+   propagated to this IP. Please make sure that you have specified the frequency
+   of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK - Did not update the value for parameter:
+   management_0:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be
+   propagated to this IP. Please make sure that you have specified the frequency
+   of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK - Did not update the value for parameter:
+   payload_engine_0:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be
+   propagated to this IP. Please make sure that you have specified the frequency
+   of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK - IPNAME: nf10_input_arbiter, INSTANCE: nf10_input_arbiter_0 - Tools
+   are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to
+   '1'. 
+INFO:EDK - IPNAME: nf10_bram_output_queues, INSTANCE: nf10_bram_output_queues_0
+   - Tools are updating the value of the parameter
+   C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to '1'. 
+INFO:EDK - IPNAME: nf10_packet_decoder, INSTANCE: nf10_packet_decoder_0 - Tools
+   are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to
+   '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x0000003f) header_engine_0	axi_interconnect_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x40000fff) axi_cfg_fpga_0	axi_interconnect_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi_interconnect_0
+  (0x41a00000-0x41a0ffff) axi_timebase_wdt_0	axi_interconnect_0
+  (0x6a000000-0x6a00ffff) nf10_identifier_0	axi_interconnect_0
+  (0x75400000-0x7540ffff) nf10_nic_output_port_lookup_0	axi_interconnect_0
+  (0x76600000-0x7660ffff) nf10_bram_output_queues_0	axi_interconnect_0
+  (0x77600000-0x7760ffff) nf10_packet_decoder_0	axi_interconnect_0
+  (0x77a00000-0x77a0ffff) nf10_input_arbiter_0	axi_interconnect_0
+  (0x77a20000-0x77a2ffff) nf10_10g_interface_3	axi_interconnect_0
+  (0x77a40000-0x77a4ffff) nf10_10g_interface_2	axi_interconnect_0
+  (0x77a60000-0x77a6ffff) nf10_10g_interface_1	axi_interconnect_0
+  (0x77a80000-0x77a8ffff) nf10_10g_interface_0	axi_interconnect_0
+  (0x7a000000-0x7a00ffff) nf10_mdio_0	axi_interconnect_0
+  (0x7d400000-0x7d40ffff) dma_0	axi_interconnect_0
+  (0x80000000-0x83ffffff) axi_emc_0	axi_interconnect_0
+
+
+WARNING:EDK - Peripheral management_0 is not accessible from any processor in
+   the system. Check Bus Interface connections and address parameters. 
+
+
+WARNING:EDK - Peripheral payload_engine_0 is not accessible from any processor
+   in the system. Check Bus Interface connections and address parameters. 
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+   xilinx/pcores/lmb_v10_v1_00_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+   xilinx/pcores/lmb_v10_v1_00_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x4000 -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/lib/hw/
+   xilinx/pcores/bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 67 
+
+Checking platform address map ...
+ERROR:EDK - INST:header_engine_0 BASEADDR-HIGHADDR:0000000000-0x0000003f - 
+   address space is less than min_size 4096 bytes! -
+   /home/netfpga/Working/netfpga/K13_NIDS/NetFPGA-10G-live-release_5.0.7/project
+   s/NetFPGA10G_snort/hw/system.mhs line 617 
+ERROR:EDK - platgen failed with errors!
