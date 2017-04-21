@@ -1,0 +1,125 @@
+
+Release 13.4 - Simulation Model Generator Xilinx EDK 13.4 Build EDK_O.87xd
+ (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: simgen -p xc5vtx240tff1759-2 -lang verilog -intstyle default -lp
+/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/ -pe microblaze_0
+bootloops/microblaze_0.elf -msg __xps/ise/xmsgprops.lst -s isim -tb -m
+behavioral system_axisim.mhs 
+
+MHS file              : /.../NetFPGA10G_snort/test/system_axisim.mhs
+Language (-lang)      : Verilog 
+Flow (-flow)      : ISE 
+Simulation Model (-m) : Behavioral
+Simulator (-s)        : ISE Simulator (ISIM)
+Part (-p) [ family ]  : xc5vtx240tff1759-2 [ virtex5 ]
+External memory simulation (-external_mem_sim) : FALSE 
+
+Output directory (-od):
+/home/binhtran/NetFPGA-10G-live-release_5.0.7/projects/NetFPGA10G_snort/test/
+
+Library Path (-lp): /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/
+
+
+Simulation Model Generator started ...
+
+Reading MHS file ...
+lp : /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/
+
+Reading MPD definitions ...
+Instance name for AXI EMC core 
+
+Overriding IP level properties ...
+
+INTERNAL ERROR: C_FAMILY value virtex5 not supported by axi_interconnect.
+All data-path FIFOs (if any) are implemented as LUT RAM.
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/microblaze
+   _v8_00_b/data/microblaze_v2_1_0.mpd line 182 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/microblaze
+   _v8_00_b/data/microblaze_v2_1_0.mpd line 320 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/microblaze
+   _v8_00_b/data/microblaze_v2_1_0.mpd line 343 
+
+Computing clock values...
+INFO:EDK - Frequency for Top-Level Input Clock 'CLK' is not specified. Clock
+   DRCs will not be performed for IPs connected to that clock port, unless they
+   are connected through the clock generator IP. 
+
+INFO:EDK - Did not update the value for parameter:
+   header_engine_0:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be
+   propagated to this IP. Please make sure that you have specified the frequency
+   of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK - Did not update the value for parameter:
+   management_0:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be
+   propagated to this IP. Please make sure that you have specified the frequency
+   of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK - Did not update the value for parameter:
+   payload_engine_0:C_S_AXI_ACLK_FREQ_HZ. Top-level frequency could not be
+   propagated to this IP. Please make sure that you have specified the frequency
+   of the top-level clock port, and that the clocks are properly connected.
+INFO:EDK - IPNAME: nf10_input_arbiter, INSTANCE: nf10_input_arbiter_0 - Tools
+   are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to
+   '1'. 
+INFO:EDK - IPNAME: nf10_bram_output_queues, INSTANCE: nf10_bram_output_queues_0
+   - Tools are updating the value of the parameter
+   C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to '1'. 
+INFO:EDK - IPNAME: nf10_packet_decoder, INSTANCE: nf10_packet_decoder_0 - Tools
+   are updating the value of the parameter C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC to
+   '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0000000000-0x0000ffff) header_engine_0	axi_interconnect_0
+  (0x40000000-0x40000fff) axi_cfg_fpga_0	axi_interconnect_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi_interconnect_0
+  (0x41a00000-0x41a0ffff) axi_timebase_wdt_0	axi_interconnect_0
+  (0x6a000000-0x6a00ffff) nf10_identifier_0	axi_interconnect_0
+  (0x75400000-0x7540ffff) nf10_nic_output_port_lookup_0	axi_interconnect_0
+  (0x76600000-0x7660ffff) nf10_bram_output_queues_0	axi_interconnect_0
+  (0x77600000-0x7760ffff) nf10_packet_decoder_0	axi_interconnect_0
+  (0x77a00000-0x77a0ffff) nf10_input_arbiter_0	axi_interconnect_0
+  (0x7a000000-0x7a00ffff) nf10_mdio_0	axi_interconnect_0
+  (0x80000000-0x83ffffff) axi_emc_0	axi_interconnect_0
+
+
+WARNING:EDK - Peripheral management_0 is not accessible from any processor in
+   the system. Check Bus Interface connections and address parameters. 
+
+
+WARNING:EDK - Peripheral payload_engine_0 is not accessible from any processor
+   in the system. Check Bus Interface connections and address parameters. 
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/lmb_v10_v1
+   _00_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/lmb_v10_v1
+   _00_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x4000 -
+   /home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/bram_block
+   _v1_00_a/data/bram_block_v2_1_0.mpd line 67 
+
+Checking platform address map ...
+ERROR:EDK - CLK s_axi_aclk on INSTANCE header_engine_0 is not connected. All AXI
+   master/slaves are required to be clocked.
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - 2 master(s) : 11
+slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+
+Running UPDATE Tcl procedures for OPTION SIMGEN_SYSLEVEL_UPDATE_PROC...

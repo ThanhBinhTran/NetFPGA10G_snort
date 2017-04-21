@@ -1,0 +1,165 @@
+################################################################################
+#
+#  NetFPGA-10G http://www.netfpga.org
+#
+#  File:
+#        payload_engine_v1_00_a.pao 
+#
+#  Author:
+#        binhtran
+#
+#  Description:
+#        payload_engine's  Peripheral Analyze Order File
+#
+#  Copyright notice:
+#        Copyright (C) 2010, 2011 The Board of Trustees of The Leland Stanford
+#                                 Junior University
+#
+#  Licence:
+#        This file is part of the NetFPGA 10G development base package.
+#
+#        This file is free code: you can redistribute it and/or modify it under
+#        the terms of the GNU Lesser General Public License version 2.1 as
+#        published by the Free Software Foundation.
+#
+#        This package is distributed in the hope that it will be useful, but
+#        WITHOUT ANY WARRANTY; without even the implied warranty of
+#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#        Lesser General Public License for more details.
+#
+#        You should have received a copy of the GNU Lesser General Public
+#        License along with the NetFPGA source package.  If not, see
+#        http://www.gnu.org/licenses/.
+#
+#
+lib proc_common_v3_00_a  all
+lib nf10_proc_common_v1_00_a  all
+lib axi_lite_ipif_v1_01_a  all
+
+lib payload_engine_v1_00_a bram_entity_0_0 verilog
+lib payload_engine_v1_00_a engine_0_0 verilog
+lib payload_engine_v1_00_a engine_0_1 verilog
+lib payload_engine_v1_00_a engine_0_2 verilog
+lib payload_engine_v1_00_a engine_0_3 verilog
+lib payload_engine_v1_00_a CentralizedCharacter_0 verilog
+lib payload_engine_v1_00_a ram_pcre_T1 verilog
+lib payload_engine_v1_00_a ram_pcre_T2 verilog
+lib payload_engine_v1_00_a indexer256 verilog
+lib payload_engine_v1_00_a indexer32 verilog
+lib payload_engine_v1_00_a Group_0 verilog
+lib payload_engine_v1_00_a process_pcre verilog
+lib payload_engine_v1_00_a fifo_combine verilog
+lib payload_engine_v1_00_a main_fifo verilog
+lib payload_engine_v1_00_a counter_fifo_cp verilog
+lib payload_engine_v1_00_a ram_combine verilog
+lib payload_engine_v1_00_a fifo_valid verilog
+lib payload_engine_v1_00_a ram_type5_T2 verilog
+lib payload_engine_v1_00_a ram_type5_T1 verilog
+lib payload_engine_v1_00_a ram_type4_T2 verilog
+lib payload_engine_v1_00_a ram_type4_T1 verilog
+lib payload_engine_v1_00_a ram_type1 verilog
+lib payload_engine_v1_00_a indexBuffer verilog
+lib payload_engine_v1_00_a process_type1
+lib payload_engine_v1_00_a process_type4
+lib payload_engine_v1_00_a process_type5
+lib payload_engine_v1_00_a ramT5 verilog
+#lib payload_engine_v1_00_a src/payload/constant verilog
+lib payload_engine_v1_00_a combine_pcre verilog
+lib payload_engine_v1_00_a option_process verilog 
+lib payload_engine_v1_00_a end_matching_shift_12.v verilog
+lib payload_engine_v1_00_a end_matching_shift.v verilog
+lib payload_engine_v1_00_a compare verilog
+
+lib payload_engine_v1_00_a ram_t3_l16_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l16 verilog
+lib payload_engine_v1_00_a ram_l16_nocase verilog
+lib payload_engine_v1_00_a ram_l16 verilog
+lib payload_engine_v1_00_a ram_t3_l15_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l15 verilog
+lib payload_engine_v1_00_a ram_l15_nocase verilog
+lib payload_engine_v1_00_a ram_l15 verilog
+lib payload_engine_v1_00_a ram_t3_l14_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l14 verilog
+lib payload_engine_v1_00_a ram_l14_nocase verilog
+lib payload_engine_v1_00_a ram_l14 verilog
+lib payload_engine_v1_00_a ram_t3_l13_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l13 verilog
+lib payload_engine_v1_00_a ram_l13_nocase verilog
+lib payload_engine_v1_00_a ram_l13 verilog
+lib payload_engine_v1_00_a ram_t3_l12_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l12 verilog
+lib payload_engine_v1_00_a ram_l12_nocase verilog
+lib payload_engine_v1_00_a ram_l12 verilog
+lib payload_engine_v1_00_a ram_t3_l11_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l11 verilog
+lib payload_engine_v1_00_a ram_l11_nocase verilog
+lib payload_engine_v1_00_a ram_l11 verilog
+lib payload_engine_v1_00_a ram_t3_l10_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l10 verilog
+lib payload_engine_v1_00_a ram_l10_nocase verilog
+lib payload_engine_v1_00_a ram_l10 verilog
+lib payload_engine_v1_00_a ram_t3_l9_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l9 verilog
+lib payload_engine_v1_00_a ram_l9_nocase verilog
+lib payload_engine_v1_00_a ram_l9 verilog
+lib payload_engine_v1_00_a ram_t3_l8_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l8 verilog
+lib payload_engine_v1_00_a ram_l8_nocase verilog
+lib payload_engine_v1_00_a ram_l8 verilog
+lib payload_engine_v1_00_a ram_t3_l7_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l7 verilog
+lib payload_engine_v1_00_a ram_l7_nocase verilog
+lib payload_engine_v1_00_a ram_l7 verilog
+lib payload_engine_v1_00_a ram_t3_l6_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l6 verilog
+lib payload_engine_v1_00_a ram_l6_nocase verilog
+lib payload_engine_v1_00_a ram_l6 verilog
+lib payload_engine_v1_00_a ram_t3_l5_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l5 verilog
+lib payload_engine_v1_00_a ram_l5_nocase verilog
+lib payload_engine_v1_00_a ram_l5 verilog
+lib payload_engine_v1_00_a ram_t3_l4_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l4 verilog
+lib payload_engine_v1_00_a ram_l4_nocase verilog
+lib payload_engine_v1_00_a ram_l4 verilog
+lib payload_engine_v1_00_a ram_t3_l3_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l3 verilog
+lib payload_engine_v1_00_a ram_l3_nocase verilog
+lib payload_engine_v1_00_a ram_l3 verilog
+lib payload_engine_v1_00_a ram_t3_l2_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l2 verilog
+lib payload_engine_v1_00_a ram_l2_nocase verilog
+lib payload_engine_v1_00_a ram_l2 verilog
+lib payload_engine_v1_00_a ram_t3_l1_nocase verilog
+lib payload_engine_v1_00_a ram_t3_l1 verilog
+lib payload_engine_v1_00_a ram_l1_nocase verilog
+lib payload_engine_v1_00_a ram_l1 verilog
+lib payload_engine_v1_00_a ram_t4_nocase verilog
+lib payload_engine_v1_00_a ram_t4 verilog
+
+lib payload_engine_v1_00_a Cuckoo_L16 verilog
+lib payload_engine_v1_00_a Cuckoo_L15 verilog
+lib payload_engine_v1_00_a Cuckoo_L14 verilog
+lib payload_engine_v1_00_a Cuckoo_L13 verilog
+lib payload_engine_v1_00_a Cuckoo_L12 verilog
+lib payload_engine_v1_00_a Cuckoo_L11 verilog
+lib payload_engine_v1_00_a Cuckoo_L10 verilog
+lib payload_engine_v1_00_a Cuckoo_L9 verilog
+lib payload_engine_v1_00_a Cuckoo_L8 verilog
+lib payload_engine_v1_00_a Cuckoo_L7 verilog
+lib payload_engine_v1_00_a Cuckoo_L6 verilog
+lib payload_engine_v1_00_a Cuckoo_L5 verilog
+lib payload_engine_v1_00_a Cuckoo_L4 verilog
+lib payload_engine_v1_00_a Cuckoo_L3 verilog
+lib payload_engine_v1_00_a Cuckoo_L2 verilog
+lib payload_engine_v1_00_a Cuckoo_L1 verilog
+
+lib payload_engine_v1_00_a track_pattern_nocase verilog
+lib payload_engine_v1_00_a track_pattern verilog
+lib payload_engine_v1_00_a match_pcre_engine_new verilog
+lib payload_engine_v1_00_a control_engine_new verilog
+lib payload_engine_v1_00_a match_static_engine verilog
+lib payload_engine_v1_00_a PMM_top verilog
+
+lib payload_engine_v1_00_a user_logic verilog
+lib payload_engine_v1_00_a payload_engine verilog

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">microblaze</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_ENDIANNESS</arg> value to <arg fmt="%s" index="6">1</arg> - <arg fmt="%s" index="7">/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/microblaze_v8_00_b/data/microblaze_v2_1_0.mpd line 182</arg> 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">microblaze</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_ICACHE_USE_FSL</arg> value to <arg fmt="%s" index="6">0</arg> - <arg fmt="%s" index="7">/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/microblaze_v8_00_b/data/microblaze_v2_1_0.mpd line 320</arg> 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">microblaze</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_DCACHE_USE_FSL</arg> value to <arg fmt="%s" index="6">0</arg> - <arg fmt="%s" index="7">/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/microblaze_v8_00_b/data/microblaze_v2_1_0.mpd line 343</arg> 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >Frequency for Top-Level Input Clock &apos;<arg fmt="%s" index="1">CLK</arg>&apos; is not specified. Clock DRCs will not be performed for IPs connected to that clock port, unless they are connected through the clock generator IP. 
+
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >Did not update the value for parameter: <arg fmt="%s" index="1">header_engine_0</arg>:<arg fmt="%s" index="2">C_S_AXI_ACLK_FREQ_HZ</arg>. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >Did not update the value for parameter: <arg fmt="%s" index="1">management_0</arg>:<arg fmt="%s" index="2">C_S_AXI_ACLK_FREQ_HZ</arg>. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >Did not update the value for parameter: <arg fmt="%s" index="1">payload_engine_0</arg>:<arg fmt="%s" index="2">C_S_AXI_ACLK_FREQ_HZ</arg>. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">nf10_input_arbiter</arg>, INSTANCE: <arg fmt="%s" index="2">nf10_input_arbiter_0</arg> - Tools are updating the value of the parameter <arg fmt="%s" index="3">C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC</arg> to &apos;1&apos;. 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">nf10_bram_output_queues</arg>, INSTANCE: <arg fmt="%s" index="2">nf10_bram_output_queues_0</arg> - Tools are updating the value of the parameter <arg fmt="%s" index="3">C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC</arg> to &apos;1&apos;. 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">nf10_packet_decoder</arg>, INSTANCE: <arg fmt="%s" index="2">nf10_packet_decoder_0</arg> - Tools are updating the value of the parameter <arg fmt="%s" index="3">C_INTERCONNECT_S_AXI_IS_ACLK_ASYNC</arg> to &apos;1&apos;. 
+</msg>
+
+<msg type="warning" file="EDK" num="0" delta="new" >Peripheral <arg fmt="%s" index="1">management_0</arg> is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+</msg>
+
+<msg type="warning" file="EDK" num="0" delta="new" >Peripheral <arg fmt="%s" index="1">payload_engine_0</arg> is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">lmb_v10</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0_ilmb</arg> - <arg fmt="%s" index="3">tool</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_LMB_NUM_SLAVES</arg> value to <arg fmt="%s" index="6">1</arg> - <arg fmt="%s" index="7">/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/lmb_v10_v1_00_a/data/lmb_v10_v2_1_0.mpd line 70</arg> 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">lmb_v10</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0_dlmb</arg> - <arg fmt="%s" index="3">tool</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_LMB_NUM_SLAVES</arg> value to <arg fmt="%s" index="6">1</arg> - <arg fmt="%s" index="7">/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/lmb_v10_v1_00_a/data/lmb_v10_v2_1_0.mpd line 70</arg> 
+</msg>
+
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">bram_block</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0_bram_block</arg> - <arg fmt="%s" index="3">tool</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_MEMSIZE</arg> value to <arg fmt="%s" index="6">0x4000</arg> - <arg fmt="%s" index="7">/home/binhtran/NetFPGA-10G-live-release_5.0.7/lib/hw/xilinx/pcores/bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 67</arg> 
+</msg>
+
+<msg type="error" file="EDK" num="0" delta="new" >CLK <arg fmt="%s" index="1">s_axi_aclk</arg> on INSTANCE <arg fmt="%s" index="2">header_engine_0</arg> is not connected. All AXI master/slaves are required to be clocked.
+</msg>
+
+</messages>
+

@@ -1,0 +1,64 @@
+##############################################################
+#
+# Xilinx Core Generator version K.39
+# Date: Wed Jul 10 01:19:29 2013
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = False
+SET asysymbol = True
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = VHDL
+SET device = xc2vp50
+SET devicefamily = virtex2p
+SET flowvendor = Foundation_iSE
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Ngc
+SET package = ff1152
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -7
+SET verilogsim = True
+SET vhdlsim = True
+# END Project Options
+# BEGIN Select
+SELECT RAM-based_Shift_Register family Xilinx,_Inc. 9.0
+# END Select
+# BEGIN Parameters
+CSET aclr=false
+CSET ainit=false
+CSET aset=false
+CSET asyncinitradix=2
+CSET asyncinitval=0
+CSET ce=false
+CSET cepriority=Sync_Overrides_CE
+CSET component_name=end_matching_shift_12
+CSET defaultdata=0
+CSET defaultdataradix=2
+CSET depth=12
+CSET meminitfile=no_coe_file_loaded
+CSET optgoal=Resources
+CSET readmiffile=false
+CSET reglastbit=true
+CSET sclr=false
+CSET shiftregtype=Fixed_Length
+CSET sinit=false
+CSET sset=false
+CSET syncctrlpriority=Reset_Overrides_Set
+CSET syncinitradix=2
+CSET syncinitval=0
+CSET width=1
+# END Parameters
+GENERATE
+# CRC: 3c4c1bee
+
